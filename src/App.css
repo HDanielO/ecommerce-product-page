@@ -49,9 +49,10 @@
 .header-layout-right,
 .header-layout-left {
   display: flex;
-  align-content: center;
+  align-items: center;
   gap: 1em;
 }
+
 #open-menu-icon,
 #close-menu-icon {
   width: 0.75em;
@@ -62,11 +63,11 @@
 }
 
 #cart-icon {
-  width: 0.95em;
+  width: 1.65em;
 }
 
 #user-avatar {
-  width: 1.45em;
+  width: 1.65em;
 }
 
 .menu-container {
@@ -109,6 +110,21 @@
   flex-direction: column;
   gap: 1em;
   font-weight: var(--bold-font);
+}
+
+.cart-icon-layout {
+  position: relative;
+}
+
+.order-amount-logo {
+  position: absolute;
+  top: 0;
+  font-size: 0.5rem;
+  right: 0;
+  color: var(--white);
+  background-color: var(--orange);
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
 }
 
 .product-slider {
@@ -228,7 +244,7 @@
 
 .add-to-cart-btn {
   width: 90%;
-  margin: 0em 1em;
+  margin: 1em auto;
   padding: 1em;
   border: none;
   border-radius: 0.5em;
@@ -236,4 +252,10 @@
   background-color: var(--orange);
   font-weight: var(--bold-font);
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2em;
+
+  /*  for the button to be centered i had to change the display to block (or flex, since flex will give it a block property */
 }

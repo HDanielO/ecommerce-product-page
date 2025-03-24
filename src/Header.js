@@ -1,3 +1,7 @@
+import { useContext } from "react";
+
+import { Context } from "./Home";
+
 const openMenu = () => {
   const menuContainerElm = document.querySelector(".menu-container");
   const bodyHTML = document.querySelector("body");
@@ -12,6 +16,10 @@ const closeMenu = () => {
 };
 
 const Header = () => {
+  const { order, displayBlock } = useContext(Context);
+  const [orderAmount, setOrderAmount] = order;
+  const [isDisplayBlock, setIsDisplayBlock] = displayBlock;
+
   return (
     <div className="Header">
       <div className="header-layout-left">
@@ -45,7 +53,17 @@ const Header = () => {
         </div>
       </div>
       <div className="header-layout-right">
-        <img src="/images/icon-cart.svg" alt="cart icon" id="cart-icon" />
+        <div className="cart-icon-layout">
+          <img src="/images/icon-cart.svg" alt="cart icon" id="cart-icon" />
+          <p
+            className="order-amount-logo"
+            style={{
+              display: isDisplayBlock ? "block" : "none",
+            }}
+          >
+            {orderAmount}
+          </p>
+        </div>
         <img src="/images/image-avatar.png" alt="avatar" id="user-avatar" />
       </div>
     </div>
