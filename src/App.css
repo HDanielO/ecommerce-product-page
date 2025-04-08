@@ -39,6 +39,7 @@
   overflow: hidden;
 }
 
+/*  HEADER.JS */
 .Header {
   display: flex;
   justify-content: space-between;
@@ -127,6 +128,10 @@
   border-radius: 0.5em;
 }
 
+/* ************************** */
+
+/* PRODUCTSLIDER.JS */
+
 .product-slider {
   position: relative;
 }
@@ -153,13 +158,24 @@
   max-width: 100vw;
   display: flex;
   align-items: center;
-  /* gap: 0.5em; */
+
+  /* hide scroll-bar */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.product-slider-mobile::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 .product-image {
   min-width: 100vw;
   height: 20em;
 }
+
+/* ************************** */
+
+/* PRODUCTDESCRIPTION.JS */
 
 .product-description {
   padding: 1em 1.25em;
