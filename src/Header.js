@@ -16,9 +16,14 @@ const closeMenu = () => {
 };
 
 const Header = () => {
-  const { order, displayBlock } = useContext(Context);
+  const { order, displayBlock, cartComponentBlock } = useContext(Context);
   const [orderAmount, setOrderAmount] = order;
   const [isDisplayBlock, setIsDisplayBlock] = displayBlock;
+  const [isCartComponentBlock, setIsCartComponentBlock] = cartComponentBlock;
+
+  const openCart = () => {
+    setIsCartComponentBlock(!isCartComponentBlock);
+  };
 
   return (
     <div className="Header">
@@ -53,7 +58,7 @@ const Header = () => {
         </div>
       </div>
       <div className="header-layout-right">
-        <div className="cart-icon-layout">
+        <div className="cart-icon-layout" onClick={openCart}>
           <img src="/images/icon-cart.svg" alt="cart icon" id="cart-icon" />
           <p
             className="order-amount-logo"

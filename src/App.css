@@ -78,7 +78,7 @@
   background-color: var(--black-75);
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 3;
 }
 
 .nav-bar {
@@ -171,6 +171,93 @@
 .product-image {
   min-width: 100vw;
   height: 20em;
+}
+
+/* ************************** */
+
+/* CARTDETAILS.JS */
+.cart-details-layout {
+  position: absolute;
+  top: 10%;
+  z-index: 2;
+  width: 95vw;
+  background-color: var(--white);
+  border-radius: 0.5em;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.cart-details-layout .heading {
+  font-size: 1rem;
+  padding: 1em;
+  font-weight: var(--bold-font);
+  border-bottom: 1px solid var(--black-75);
+}
+
+.cart-details-layout .details {
+  min-height: 20vh;
+  padding: 1em;
+}
+
+.empty-message {
+  color: var(--black-75);
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.order-item-layout {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.order-item-thumbnail {
+  width: 3.5em;
+  border-radius: 0.5em;
+}
+
+.order-item-detail-layout .item-name {
+  font-size: 0.85rem;
+  color: var(--grayish-blue);
+  margin-bottom: 0.75em;
+  font-weight: var(--bold-font);
+}
+
+.order-item-detail-layout .item-price {
+  font-size: 0.85rem;
+  color: var(--grayish-blue);
+  font-weight: var(--bold-font);
+}
+
+.order-item-detail-layout .item-total-price {
+  color: var(--black);
+  font-weight: var(--bold-font);
+  margin-left: 0.75em;
+}
+
+.delete-icon {
+  width: 1em;
+}
+
+.checkout-btn {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1em;
+  border: none;
+  border-radius: 0.5em;
+  color: var(--black);
+  background-color: var(--orange);
+  font-weight: var(--bold-font);
+  font-size: 1rem;
 }
 
 /* ************************** */
@@ -275,3 +362,16 @@
 
   /*  for the button to be centered i had to change the display to block (or flex, since flex will give it a block property */
 }
+
+/* TABLET SCREEN SIZE */
+@media screen and (min-width: 750px) {
+  .Header {
+    padding: 1.25em 1.25em;
+  }
+
+  .product-image {
+    height: 35em;
+  }
+}
+
+/* DESKTOP SCREEN SIZE */
