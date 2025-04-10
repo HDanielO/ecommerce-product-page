@@ -1,3 +1,6 @@
+const productThumbnailArr =
+  document.getElementsByClassName("product-thumbnail");
+
 const ProductSlider = () => {
   const nextBtnFunctionality = () => {
     const productImage = document.querySelector(".product-image");
@@ -10,6 +13,7 @@ const ProductSlider = () => {
     document.querySelector(".product-slider-mobile").scrollLeft -=
       productImage.offsetWidth;
   };
+
   return (
     <div className="product-slider">
       <img
@@ -53,9 +57,7 @@ const ProductSlider = () => {
           className="product-image-desktop"
         />
         <div className="product-thumbnail-row">
-          <div
-            className="product-thumbnail"
-          ></div>
+          <div className="product-thumbnail"></div>
           <div className="product-thumbnail"></div>
           <div className="product-thumbnail"></div>
           <div className="product-thumbnail"></div>
