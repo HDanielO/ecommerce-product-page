@@ -46,6 +46,21 @@ const ProductSlider = () => {
           className="product-image"
         />
       </div>
+      <div className="product-slider-desktop">
+        <img
+          src="/images/image-product-1.jpg"
+          alt="product image"
+          className="product-image-desktop"
+        />
+        <div className="product-thumbnail-row">
+          <div
+            className="product-thumbnail"
+          ></div>
+          <div className="product-thumbnail"></div>
+          <div className="product-thumbnail"></div>
+          <div className="product-thumbnail"></div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -173,6 +173,9 @@
   height: 20em;
 }
 
+.product-slider-desktop {
+  display: none;
+}
 /* ************************** */
 
 /* CARTDETAILS.JS */
@@ -464,7 +467,293 @@
 
   /* ************************** */
 
+  .product-section {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 3em auto;
+    gap: 4em;
+  }
 
+  /* PRODUCTSLIDER.JS */
 
-  
+  .product-slider {
+    position: relative;
+  }
+
+  .product-slider-mobile {
+    display: none;
+  }
+
+  .previous-icon,
+  .next-icon {
+    display: none;
+  }
+
+  .product-slider-desktop {
+    display: block;
+  }
+
+  .product-image-desktop {
+    width: 25em;
+    border-radius: 0.5em;
+  }
+
+  .product-thumbnail-row {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+  }
+
+  .product-thumbnail-row div {
+    width: 4em;
+    height: 4em;
+    background-size: contain;
+    border-radius: 0.5em;
+  }
+
+  .product-thumbnail-row div:hover {
+    border: 2px solid var(--orange);
+  }
+
+  .product-thumbnail:first-of-type {
+    border: 2px solid var(--orange);
+
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url(/public/images/image-product-1-thumbnail.jpg);
+  }
+
+  .product-thumbnail:first-of-type:hover {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url(/public/images/image-product-1-thumbnail.jpg);
+  }
+
+  .product-thumbnail:nth-child(2) {
+    background-image: url(/public/images/image-product-2-thumbnail.jpg);
+  }
+  .product-thumbnail:nth-child(2):hover {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url(/public/images/image-product-2-thumbnail.jpg);
+  }
+
+  .product-thumbnail:nth-child(3) {
+    background-image: url(/public/images/image-product-3-thumbnail.jpg);
+  }
+  .product-thumbnail:nth-child(3):hover {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url(/public/images/image-product-3-thumbnail.jpg);
+  }
+  .product-thumbnail:nth-child(4) {
+    background-image: url(/public/images/image-product-4-thumbnail.jpg);
+  }
+  .product-thumbnail:nth-child(4):hover {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url(/public/images/image-product-4-thumbnail.jpg);
+  }
+
+  /* ************************** */
+
+  /* CARTDETAILS.JS */
+  .cart-details-layout {
+    position: absolute;
+    top: 10%;
+    z-index: 2;
+    width: 95vw;
+    background-color: var(--white);
+    border-radius: 0.5em;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .cart-details-layout .heading {
+    font-size: 1rem;
+    padding: 1em;
+    font-weight: var(--bold-font);
+    border-bottom: 1px solid var(--black-75);
+  }
+
+  .cart-details-layout .details {
+    min-height: 20vh;
+    padding: 1em;
+  }
+
+  .empty-message {
+    color: var(--black-75);
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  .order-item-layout {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .order-item-thumbnail {
+    width: 3.5em;
+    border-radius: 0.5em;
+  }
+
+  .order-item-detail-layout .item-name {
+    font-size: 0.85rem;
+    color: var(--grayish-blue);
+    margin-bottom: 0.75em;
+    font-weight: var(--bold-font);
+  }
+
+  .order-item-detail-layout .item-price {
+    font-size: 0.85rem;
+    color: var(--grayish-blue);
+    font-weight: var(--bold-font);
+  }
+
+  .order-item-detail-layout .item-total-price {
+    color: var(--black);
+    font-weight: var(--bold-font);
+    margin-left: 0.75em;
+  }
+
+  .delete-icon {
+    width: 1em;
+  }
+
+  .checkout-btn {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    color: var(--black);
+    background-color: var(--orange);
+    font-weight: var(--bold-font);
+    font-size: 1rem;
+  }
+
+  /* ************************** */
+
+  /* PRODUCTDESCRIPTION.JS */
+
+  .product-description {
+    padding: 1em 1.25em;
+  }
+
+  .product-company {
+    color: var(--dark-grayish-blue);
+    font-weight: var(--bold-font);
+    font-size: 0.75rem;
+    margin-bottom: 0.5em;
+  }
+  .product-title {
+    font-weight: var(--bold-font);
+    color: var(--black);
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+  }
+
+  .product-description-text {
+    color: var(--dark-grayish-blue);
+    font-weight: var(--regular-font);
+    font-size: 0.875rem;
+    margin-bottom: 0.5em;
+  }
+
+  .product-pricing-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0em 1.25em;
+    margin-bottom: 0.5em;
+  }
+
+  .discount-layout {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .discounted-price {
+    font-weight: var(--bold-font);
+    font-size: 1.25rem;
+  }
+
+  .discount-percentage {
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: var(--regular-font);
+    font-size: 0.75rem;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+  }
+
+  .original-price {
+    color: var(--dark-grayish-blue);
+    font-size: 0.75rem;
+    font-weight: var(--bold-font);
+  }
+
+  .product-counter {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-grayish-blue);
+    margin: 0em 1.25em;
+    border-radius: 0.5em;
+    margin-bottom: 0.7em;
+  }
+
+  #decrease-btn,
+  #increase-btn {
+    width: 1em;
+  }
+
+  .product-amount {
+    font-weight: var(--bold-font);
+    color: var(--black);
+    font-size: 0.8rem;
+  }
+
+  .add-to-cart-btn {
+    width: 90%;
+    margin: 1em auto;
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    color: var(--black);
+    background-color: var(--orange);
+    font-weight: var(--bold-font);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2em;
+
+    /*  for the button to be centered i had to change the display to block (or flex, since flex will give it a block property */
+  }
 }
